@@ -63,6 +63,7 @@ const styles = StyleSheet.create({
     flex: 1,
     marginTop: 8,
     backgroundColor: "aliceblue",
+    flexDirection: "row",
   },
   box: {
     width: 50,

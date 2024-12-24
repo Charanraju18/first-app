@@ -10,8 +10,11 @@ import {
   TouchableOpacity,
 } from "react-native";
 import JustifyContentBasics from "./components/JustifyContentBasics";
+import { useEffect, useState } from "react";
 
 export default function App() {
+  const [carName, setCarName] = useState("Curvv");
+
   const data = [
     {
       Car: "https://imgd.aeplcdn.com/600x337/n/cw/ec/139651/curvv-exterior-right-front-three-quarter.jpeg?isig=0&q=80",
@@ -32,7 +35,11 @@ export default function App() {
   ];
 
   const rendername = ({ item }) => (
-    <TouchableOpacity onPress={() => console.log(item.name)}>
+    <TouchableOpacity
+      onPress={() => {
+        setCarName(item.name);
+      }}
+    >
       <View style={styles.carNameDiv}>
         <Text style={styles.carText}>{item.name}</Text>
       </View>
@@ -41,18 +48,24 @@ export default function App() {
 
   return (
     <>
-      {/* <View style={styles.mainDiv}>
+      <View style={styles.mainDiv}>
         <View style={styles.insideDiv}>
-          <Image
-            source={{ uri: data[0].Car }}
-            style={{ width: "80%", height: "80%" }}
-          />
+          {data.map((item) => {
+            if (item.name === carName) {
+              return (
+                <Image
+                  key={item}
+                  source={{ uri: item.Car }}
+                  style={{ width: "80%", height: "80%" }}
+                />
+              );
+            }
+          })}
         </View>
         <View style={styles.insideDiv}>
           <FlatList data={data} renderItem={rendername} />
         </View>
-      </View> */}
-      <JustifyContentBasics></JustifyContentBasics>
+      </View>
     </>
   );
 }
