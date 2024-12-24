@@ -9,77 +9,80 @@ import {
   ActivityIndicator,
   TouchableOpacity,
 } from "react-native";
+import JustifyContentBasics from "./components/JustifyContentBasics";
 
 export default function App() {
-  const data = ["Android App", "iOS", "Windows", "Mac"];
+  const data = [
+    {
+      Car: "https://imgd.aeplcdn.com/600x337/n/cw/ec/139651/curvv-exterior-right-front-three-quarter.jpeg?isig=0&q=80",
+      name: "Curvv",
+    },
+    {
+      Car: "https://imgd.aeplcdn.com/664x374/n/cw/ec/106815/creta-exterior-right-front-three-quarter-4.jpeg?isig=0&q=80",
+      name: "Creta",
+    },
+    {
+      Car: "https://imgd.aeplcdn.com/664x374/n/cw/ec/124839/thar-roxx-exterior-right-front-three-quarter-24.jpeg?isig=0&q=80",
+      name: "Thar Roxx",
+    },
+    {
+      Car: "https://imgd.aeplcdn.com/664x374/n/cw/ec/44709/fortuner-exterior-right-front-three-quarter-20.jpeg?isig=0&q=80",
+      name: "Fortuner",
+    },
+  ];
+
+  const rendername = ({ item }) => (
+    <TouchableOpacity onPress={() => console.log(item.name)}>
+      <View style={styles.carNameDiv}>
+        <Text style={styles.carText}>{item.name}</Text>
+      </View>
+    </TouchableOpacity>
+  );
 
   return (
-    <View style={styles.container}>
-      <Image
-        source={{
-          uri: "https://www.svtsydney.org/wp-content/uploads/2019/05/Lord_Ganesha-min.jpg",
-        }}
-        style={{ width: 300, height: 300 }}
-        onError={() => console.log("Image not found")}
-      />
-      {/* <ActivityIndicator size="large" color="skyblue" /> */}
-      <FlatList
-        horizontal
-        data={data}
-        renderItem={({ item }) => (
-          <>
-            <View style={styles.buttonContainer}>
-              <Text style={styles.buttonText}>{item}</Text>
-            </View>
-          </>
-        )}
-      />
-      <TouchableOpacity
-        style={styles.customButton}
-        onPress={() => console.log("Button Pressed")}
-      >
-        <Text style={styles.customButtonText}>Submit</Text>
-      </TouchableOpacity>
-    </View>
+    <>
+      {/* <View style={styles.mainDiv}>
+        <View style={styles.insideDiv}>
+          <Image
+            source={{ uri: data[0].Car }}
+            style={{ width: "80%", height: "80%" }}
+          />
+        </View>
+        <View style={styles.insideDiv}>
+          <FlatList data={data} renderItem={rendername} />
+        </View>
+      </View> */}
+      <JustifyContentBasics></JustifyContentBasics>
+    </>
   );
 }
 
 const styles = StyleSheet.create({
-  container: {
-    paddingTop: 20,
-    height: "fit-content",
+  mainDiv: {
     width: "100%",
-    flex: 1,
-    backgroundColor: "#fff",
+    height: "100%",
+    display: "flex",
+    flexDirection: "column",
+    justifyContent: "space-evenly",
+  },
+  insideDiv: {
+    width: "100%",
+    height: 250,
+    backgroundColor: "white",
+    display: "flex",
     justifyContent: "center",
     alignItems: "center",
   },
-  buttonContainer: {
-    height: 50,
-    borderRadius: 15,
-    backgroundColor: "skyblue",
+  carNameDiv: {
+    width: 100,
+    backgroundColor: "black",
     padding: 10,
-    margin: 5,
-    flex: 1,
-    alignItems: "center",
-    justifyContent: "center",
-  },
-  buttonText: {
-    fontSize: 18,
-    color: "#000",
-  },
-  customButton: {
-    marginTop: 20,
-    backgroundColor: "skyblue",
+    margin: 10,
     borderRadius: 15,
-    paddingVertical: 10,
-    paddingHorizontal: 20,
-    alignItems: "center",
-    justifyContent: "center",
   },
-  customButtonText: {
-    color: "#fff",
-    fontSize: 16,
-    fontWeight: "bold",
+  carText: {
+    fontWeight: 700,
+    textAlign: "center",
+    color: "white",
   },
 });
