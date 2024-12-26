@@ -14,6 +14,7 @@ import { useEffect, useState } from "react";
 
 export default function App() {
   const [carName, setCarName] = useState("Curvv");
+  const [select, setSelected] = useState("Curvv");
 
   const data = [
     {
@@ -85,6 +86,7 @@ const styles = StyleSheet.create({
     display: "flex",
     justifyContent: "center",
     alignItems: "center",
+    zIndex: 2,
   },
   carNameDiv: {
     width: 100,
