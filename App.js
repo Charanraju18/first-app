@@ -11,6 +11,7 @@ import {
 } from "react-native";
 import JustifyContentBasics from "./components/JustifyContentBasics";
 import { useEffect, useState } from "react";
+import Flex from "./components/flex";
 
 export default function App() {
   const [carName, setCarName] = useState("Curvv");
@@ -49,7 +50,7 @@ export default function App() {
 
   return (
     <>
-      <View style={styles.mainDiv}>
+      {/* <View style={styles.mainDiv}>
         <View style={styles.insideDiv}>
           {data.map((item) => {
             if (item.name === carName) {
@@ -66,7 +67,8 @@ export default function App() {
         <View style={styles.insideDiv}>
           <FlatList data={data} renderItem={rendername} />
         </View>
-      </View>
+      </View> */}
+      <Flex />
     </>
   );
 }
