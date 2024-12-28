@@ -64,15 +64,15 @@ const styles = StyleSheet.create({
     justifyContent: "center",
     alignItems: "center",
   },
-  p2child1: {
-    width: 250,
-    height: 375,
-    shadowColor: "#000",
-    shadowOpacity: 0.25,
-    shadowOffset: { width: 0, height: 8 },
-    shadowRadius: 16,
-    elevation: 5,
-  },
+  // p2child1: {
+  //   width: 250,
+  //   height: 375,
+  //   shadowColor: "#000",
+  //   shadowOpacity: 0.25,
+  //   shadowOffset: { width: 0, height: 8 },
+  //   shadowRadius: 16,
+  //   elevation: 5,
+  // },
 });
 
 export default Flex;
