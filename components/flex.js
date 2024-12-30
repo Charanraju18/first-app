@@ -1,24 +1,87 @@
-import { View, StyleSheet, Text, ScrollView } from "react-native";
+import { View, StyleSheet, Text, ScrollView, Image } from "react-native";
 
 function Flex() {
+  MapData = [
+    {
+      name: "Jithendra",
+      age: 20,
+      college: "ACE",
+      branch: "AIML",
+      roll: "22MH1A4211",
+    },
+    {
+      name: "Praveen",
+      age: 20,
+      college: "ACE",
+      branch: "AIML",
+      roll: "22MH1A4220",
+    },
+    {
+      name: "Sri Charan",
+      age: 21,
+      college: "ACET",
+      branch: "AIML",
+      roll: "22MH1A4223",
+    },
+    {
+      name: "Charan",
+      age: 20,
+      college: "ACE",
+      branch: "AIML",
+      roll: "22MH1A4250",
+    },
+    {
+      name: "Ravi",
+      age: 22,
+      college: "ACET",
+      branch: "AIML",
+      roll: "22MH1A4252",
+    },
+    {
+      name: "Karthik",
+      age: 21,
+      college: "ACET",
+      branch: "AIML",
+      roll: "22MH1A4254",
+    },
+    {
+      name: "Vishnu",
+      age: 22,
+      college: "ACET",
+      branch: "AIML",
+      roll: "22MH1A4259",
+    },
+    {
+      name: "Mani",
+      age: 20,
+      college: "ACE",
+      branch: "AIML",
+      roll: "22MH1A4262",
+    },
+  ];
   return (
     <>
       <ScrollView horizontal={true}>
         <View style={styles.container}>
-          {/* <View style={styles.parent1}>
-          <View style={styles.Child}>
-            <Text style={styles.Childs}>1</Text>
-          </View>
-          <View style={styles.Child}>
-            <Text style={styles.Childs}>2</Text>
-          </View>
-          <View style={styles.Child}>
-            <Text style={styles.Childs}>3</Text>
-          </View>
-        </View> */}
-          <View style={styles.parent2}>
-            <View style={styles.p2child1}></View>
-          </View>
+          {MapData.map((item, index) => {
+            return (
+              <View key={index} style={styles.p2child1}>
+                <Image
+                  source={{
+                    uri: `https://info.aec.edu.in/ACET/StudentPhotos/${item.roll}.jpg`,
+                  }}
+                  style={styles.image}
+                />
+                <View style={styles.stdetails}>
+                  <Text style={{ fontSize: 20 }}>Name :{item.name}</Text>
+                  <Text style={{ fontSize: 20 }}>Age :{item.age}</Text>
+                  <Text style={{ fontSize: 20 }}>College :{item.college}</Text>
+                  <Text style={{ fontSize: 20 }}>Branch :{item.branch}</Text>
+                  <Text style={{ fontSize: 20 }}>Roll :{item.roll}</Text>
+                </View>
+              </View>
+            );
+          })}
         </View>
       </ScrollView>
     </>
@@ -26,52 +89,39 @@ function Flex() {
 }
 
 const styles = StyleSheet.create({
-  container: {
-    width: "100%",
-    height: "auto",
-    display: "flex",
-  },
-  Child: {
-    width: 100,
-    height: 100,
-    backgroundColor: "#000",
-    color: "#fff",
-    display: "flex",
-    justifyContent: "center",
-    alignItems: "center",
-  },
-  Childs: {
-    color: "white",
-    padding: 18,
-    borderColor: "white",
-    borderWidth: 3,
-  },
-  parent1: {
-    width: "100%",
+  image: {
+    width: 150,
     height: 150,
-    display: "flex",
-    flex: 1,
-    flexDirection: "row",
-    borderWidth: 5,
-    justifyContent: "space-evenly",
-    alignItems: "center",
+    borderRadius: "50%",
+    top: 25,
   },
-  parent2: {
-    flex: 3,
+  stdetails: {
+    fontSize: 40,
+    gap: 7,
+    top: 75,
+  },
+  container: {
+    backgroundColor: "#f0f0f0",
     display: "flex",
-    borderColor: "black",
-    borderWidth: 5,
-    justifyContent: "center",
+    flexDirection: "row",
     alignItems: "center",
+    columnGap: 55,
+    padding: 40,
   },
   p2child1: {
-    width: 250,
-    height: 375,
+    width: 300,
+    height: 450,
     shadowColor: "#000",
     shadowOpacity: 0.25,
     shadowOffset: { width: 0, height: 8 },
     shadowRadius: 16,
     elevation: 5,
+    display: "flex",
+    justifyContent: "start",
+    alignItems: "center",
+    rowGap: 5,
+    // marginLeft: 30,
+    // marginright: 30,
   },
 });
 
