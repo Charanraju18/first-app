@@ -52,6 +52,13 @@ function Flex() {
       roll: "22MH1A4259",
     },
     {
+      name: "Pranay",
+      age: 20,
+      college: "ACE",
+      branch: "AIML",
+      roll: "22MH1A4261",
+    },
+    {
       name: "Mani",
       age: 20,
       college: "ACE",
@@ -92,13 +99,13 @@ const styles = StyleSheet.create({
   image: {
     width: 150,
     height: 150,
-    borderRadius: "50%",
-    top: 25,
+    borderRadius: 100,
+    top: -70,
   },
   stdetails: {
     fontSize: 40,
     gap: 7,
-    top: 75,
+    top: 0,
   },
   container: {
     backgroundColor: "#f0f0f0",
@@ -106,11 +113,11 @@ const styles = StyleSheet.create({
     flexDirection: "row",
     alignItems: "center",
     columnGap: 55,
-    padding: 40,
+    padding: 50,
   },
   p2child1: {
-    width: 300,
-    height: 450,
+    width: 335,
+    height: 400,
     shadowColor: "#000",
     shadowOpacity: 0.25,
     shadowOffset: { width: 0, height: 8 },
@@ -120,8 +127,8 @@ const styles = StyleSheet.create({
     justifyContent: "start",
     alignItems: "center",
     rowGap: 5,
-    // marginLeft: 30,
-    // marginright: 30,
+    backgroundColor: "white",
+    borderRadius: 20,
   },
 });
 
