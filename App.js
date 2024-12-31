@@ -12,6 +12,7 @@ import {
 import JustifyContentBasics from "./components/JustifyContentBasics";
 import { useEffect, useState } from "react";
 import Flex from "./components/flex";
+import TableRows from "./components/TableRows";
 
 export default function App() {
   const [carName, setCarName] = useState("Curvv");
@@ -68,7 +69,8 @@ export default function App() {
           <FlatList data={data} renderItem={rendername} />
         </View>
       </View> */}
-      <Flex />
+      {/* <Flex /> */}
+      <TableRows />
     </>
   );
 }
