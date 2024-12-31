@@ -4,9 +4,13 @@ function TableRows() {
   const date = {
     tableHead: ["Name", "Age", "College", "Branch", "Roll"],
     tableData: [
-      ["Karthik", 21, "ACET", "AIML", "22MH1A4254"],
-      ["Vishnu", 22, "ACET", "AIML", "22MH1A4259"],
-      ["Pranay", 20, "ACE", "AIML", "22MH1A4261"],
+      ["Praveen", 20, "ACET", "AIML", "22MH1A4220"],
+      ["Sri Charan", 20, "ACET", "AIML", "22MH1A4223"],
+      ["Charan", 20, "ACET", "AIML", "22MH1A4250"],
+      ["Ravi", 21, "ACET", "AIML", "22MH1A4252"],
+      ["Karthik", 23, "ACET", "AIML", "22MH1A4254"],
+      ["Vishnu", 18, "ACET", "AIML", "22MH1A4259"],
+      ["Pranay", 40, "ACET", "AIML", "22MH1A4261"],
     ],
   };
   return (
@@ -60,9 +64,9 @@ const styles = StyleSheet.create({
   },
   cellText: {
     color: "black",
-    textAlign: "center",
     padding: 10,
     fontSize: 18,
+    paddingLeft: 20,
   },
 });
 export default TableRows;
