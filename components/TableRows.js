@@ -28,12 +28,18 @@ function TableRows() {
             style={styles.header}
             textStyle={styles.headerText}
           />
-          <Rows
-            data={date.tableData}
-            widthArr={[120, 120, 120, 120, 140]}
-            style={styles.cells}
-            textStyle={styles.cellText}
-          />
+          {date.tableData.map((rowData, index) => (
+            <Row
+              key={index}
+              data={rowData}
+              widthArr={[120, 120, 120, 120, 140]}
+              style={[
+                styles.cells,
+                index % 2 && { backgroundColor: "darkgray" },
+              ]}
+              textStyle={[styles.cellText, index % 2 && { color: "white" }]}
+            />
+          ))}
         </Table>
       </View>
     </ScrollView>
