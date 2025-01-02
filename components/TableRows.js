@@ -1,10 +1,10 @@
 import { Table, Row, Rows } from "react-native-table-component";
 import { View, StyleSheet, textStyle, ScrollView } from "react-native";
 function TableRows() {
-  const date = {
+  const data = {
     tableHead: ["Name", "Age", "College", "Branch", "Roll"],
     tableData: [
-      ["Kitendra", 20, "ACET", "AIML", "22MH1A4211"],
+      ["Jitendra", 20, "ACET", "AIML", "22MH1A4211"],
       ["Praveen", 20, "ACET", "AIML", "22MH1A4220"],
       ["Sri Charan", 20, "ACET", "AIML", "22MH1A4223"],
       ["Manohar", 23, "ACET", "AIML", "22MH1A4246"],
@@ -26,12 +26,12 @@ function TableRows() {
           }}
         >
           <Row
-            data={date.tableHead}
+            data={data.tableHead}
             widthArr={[120, 120, 120, 120, 150]}
             style={styles.header}
             textStyle={styles.headerText}
           />
-          {date.tableData.map((rowData, index) => (
+          {data.tableData.map((rowData, index) => (
             <Row
               key={index}
               data={rowData}
