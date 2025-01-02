@@ -4,13 +4,16 @@ function TableRows() {
   const date = {
     tableHead: ["Name", "Age", "College", "Branch", "Roll"],
     tableData: [
+      ["Kitendra", 20, "ACET", "AIML", "22MH1A4211"],
       ["Praveen", 20, "ACET", "AIML", "22MH1A4220"],
       ["Sri Charan", 20, "ACET", "AIML", "22MH1A4223"],
+      ["Manohar", 23, "ACET", "AIML", "22MH1A4246"],
       ["Charan", 20, "ACET", "AIML", "22MH1A4250"],
       ["Ravi", 21, "ACET", "AIML", "22MH1A4252"],
       ["Karthik", 23, "ACET", "AIML", "22MH1A4254"],
       ["Vishnu", 18, "ACET", "AIML", "22MH1A4259"],
       ["Pranay", 40, "ACET", "AIML", "22MH1A4261"],
+      ["Sanjay", 19, "ACET", "AIML", "22MH1A4264"],
     ],
   };
   return (
@@ -24,7 +27,7 @@ function TableRows() {
         >
           <Row
             data={date.tableHead}
-            widthArr={[120, 120, 120, 120, 140]}
+            widthArr={[120, 120, 120, 120, 150]}
             style={styles.header}
             textStyle={styles.headerText}
           />
@@ -32,7 +35,7 @@ function TableRows() {
             <Row
               key={index}
               data={rowData}
-              widthArr={[120, 120, 120, 120, 140]}
+              widthArr={[120, 120, 120, 120, 150]}
               style={[
                 styles.cells,
                 index % 2 && { backgroundColor: "darkgray" },
