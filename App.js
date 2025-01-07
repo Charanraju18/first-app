@@ -13,6 +13,7 @@ import JustifyContentBasics from "./components/JustifyContentBasics";
 import { useEffect, useState } from "react";
 import Flex from "./components/flex";
 import TableRows from "./components/TableRows";
+import SafeArea from "./components/SafeArea";
 
 export default function App() {
   const [carName, setCarName] = useState("Curvv");
@@ -70,7 +71,8 @@ export default function App() {
         </View>
       </View> */}
       {/* <Flex /> */}
-      <TableRows />
+      {/* <TableRows /> */}
+      <SafeArea />
     </>
   );
 }
