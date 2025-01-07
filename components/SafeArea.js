@@ -5,21 +5,20 @@ import Icon from "react-native-vector-icons/AntDesign";
 
 export default function SafeArea() {
   return (
-    <SafeAreaView>
-      <View style={mystyle.container}>
-        <Text>Safe Area</Text>
-      </View>
-    </SafeAreaView>
+    <>
+      <SafeAreaView style={mystyle.container}>
+        <StatusBar style={"light"} backgroundColor="black" />
+        <View>
+          <Icon name="home" size={30} color="black" />
+        </View>
+      </SafeAreaView>
+    </>
   );
 }
 
 const mystyle = StyleSheet.create({
   container: {
     flex: 1,
-    // flexDirection: "column",
-    display: "flex",
-    justifyContent: "center",
-    alignItems: "center",
-    backgroundColor: "lightblue",
+    backgroundColor: "white",
   },
 });
