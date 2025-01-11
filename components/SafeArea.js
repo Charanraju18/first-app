@@ -15,9 +15,6 @@ export default function SafeArea() {
     <>
       <SafeAreaView style={mystyle.container}>
         <StatusBar style={textColor} backgroundColor={bgColor} />
-        {/* <View>
-          <Icon name="home" size={30} color="black" />
-        </View> */}
         <View style={mystyle.btndiv}>
           <Button title="change statusbar" onPress={changeStatusBar} />
         </View>
