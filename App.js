@@ -14,6 +14,8 @@ import { useEffect, useState } from "react";
 import Flex from "./components/flex";
 import TableRows from "./components/TableRows";
 import SafeArea from "./components/SafeArea";
+import Modals from "./components/Modals";
+import Toaster from "./components/Toaster";
 
 export default function App() {
   const [carName, setCarName] = useState("Curvv");
@@ -51,8 +53,7 @@ export default function App() {
   );
 
   return (
-    <>
-      {/* <View style={styles.mainDiv}>
+    /* <View style={styles.mainDiv}>
         <View style={styles.insideDiv}>
           {data.map((item) => {
             if (item.name === carName) {
@@ -69,10 +70,13 @@ export default function App() {
         <View style={styles.insideDiv}>
           <FlatList data={data} renderItem={rendername} />
         </View>
-      </View> */}
-      {/* <Flex /> */}
-      {/* <TableRows /> */}
-      <SafeArea />
+      </View> */
+    /* <Flex /> */
+    /* <TableRows /> */
+    /* <SafeArea /> */
+    <>
+      {/* <Modals /> */}
+      <Toaster />
     </>
   );
 }
