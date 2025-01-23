@@ -16,6 +16,7 @@ import TableRows from "./components/TableRows";
 import SafeArea from "./components/SafeArea";
 import Modals from "./components/Modals";
 import Toaster from "./components/Toaster";
+import Carousel from "./components/Carousel";
 
 export default function App() {
   const [carName, setCarName] = useState("Curvv");
@@ -76,7 +77,8 @@ export default function App() {
     /* <SafeArea /> */
     <>
       {/* <Modals /> */}
-      <Toaster />
+      {/* <Toaster /> */}
+      <Carousel />
     </>
   );
 }
