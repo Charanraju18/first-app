@@ -5,35 +5,38 @@ const Carousel = () => {
   const Info = [1, 2, 3, 4];
   return (
     <SafeAreaView>
-      <FlatList
-        data={Info}
-        renderItem={({ item }) => (
-          <View
-            style={{
-              height: height,
-              width: width,
-              justifyContent: "center",
-              alignItems: "center",
-            }}
-          >
+      <View style={{ padding: 20 }}>
+        <FlatList
+          data={Info}
+          renderItem={({ item }) => (
             <View
               style={{
-                width: "90%",
-                height: "30%",
+                height: height,
+                width: width,
                 justifyContent: "center",
                 alignItems: "center",
-                backgroundColor: "skyblue",
-                borderRadius: 15,
+                backgroundColor: "black",
               }}
             >
-              <Text style={{ color: "white", fontSize: 50 }}>{item}</Text>
+              <View
+                style={{
+                  width: "90%",
+                  height: "30%",
+                  justifyContent: "center",
+                  alignItems: "center",
+                  backgroundColor: "skyblue",
+                  borderRadius: 15,
+                }}
+              >
+                <Text style={{ color: "white", fontSize: 50 }}>{item}</Text>
+              </View>
             </View>
-          </View>
-        )}
-        horizontal
-        showsHorizontalScrollIndicator={false}
-        pagingEnabled
-      />
+          )}
+          horizontal
+          showsHorizontalScrollIndicator={false}
+          pagingEnabled
+        />
+      </View>
     </SafeAreaView>
   );
 };
