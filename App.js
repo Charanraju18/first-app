@@ -17,6 +17,7 @@ import SafeArea from "./components/SafeArea";
 import Modals from "./components/Modals";
 import Toaster from "./components/Toaster";
 import Carousel from "./components/Carousel";
+import Animations from "./components/Animated";
 
 export default function App() {
   const [carName, setCarName] = useState("Curvv");
@@ -78,7 +79,8 @@ export default function App() {
     <>
       {/* <Modals /> */}
       {/* <Toaster /> */}
-      <Carousel />
+      {/* <Carousel /> */}
+      <Animations />
     </>
   );
 }
