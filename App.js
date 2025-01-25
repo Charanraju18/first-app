@@ -18,6 +18,7 @@ import Modals from "./components/Modals";
 import Toaster from "./components/Toaster";
 import Carousel from "./components/Carousel";
 import Animations from "./components/Animated";
+import WaterDrop from "./components/waterDrop";
 
 export default function App() {
   const [carName, setCarName] = useState("Curvv");
@@ -80,7 +81,8 @@ export default function App() {
       {/* <Modals /> */}
       {/* <Toaster /> */}
       {/* <Carousel /> */}
-      <Animations />
+      {/* <Animations /> */}
+      <WaterDrop />
     </>
   );
 }
