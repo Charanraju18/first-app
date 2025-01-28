@@ -8,38 +8,28 @@ import {
   Text,
 } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
-
+import Ionicons from "react-native-vector-icons/Ionicons";
+import FontAwesome from "react-native-vector-icons/FontAwesome";
 export default function WaterDrop() {
   const { width, height } = Dimensions.get("screen");
   const waterDropAnimation = useRef(new Animated.Value(0)).current;
+  const roundDropAnimation = useRef(new Animated.Value(700)).current;
   const fun = () => {
     Animated.timing(waterDropAnimation, {
       toValue: 700,
       duration: 1500,
       useNativeDriver: false,
     }).start(() => {
-      Animated.timing(waterDropAnimation, {
+      Animated.timing(roundDropAnimation, {
         toValue: 350,
         duration: 1500,
         useNativeDriver: false,
       }).start(() => {
-        Animated.timing(waterDropAnimation, {
+        Animated.timing(roundDropAnimation, {
           toValue: 700,
           duration: 1500,
           useNativeDriver: false,
-        }).start(() => {
-          Animated.timing(waterDropAnimation, {
-            toValue: 600,
-            duration: 1500,
-            useNativeDriver: false,
-          }).start(() => {
-            Animated.timing(waterDropAnimation, {
-              toValue: 700,
-              duration: 1500,
-              useNativeDriver: false,
-            }).start();
-          });
-        });
+        }).start();
       });
     });
   };
@@ -62,19 +52,29 @@ export default function WaterDrop() {
           style={{
             width: "100%",
             display: "flex",
-            flexDirection: "row",
+            flexDirection: "column",
             justifyContent: "center",
             alignItems: "center",
           }}
         >
           <Animated.View
             style={[
-              styles.waterDrop,
               {
                 transform: [{ translateY: waterDropAnimation }],
               },
             ]}
-          ></Animated.View>
+          >
+            <Ionicons name="water-sharp" size={50} color="skyblue" />
+          </Animated.View>
+          <Animated.View
+            style={[
+              {
+                transform: [{ translateY: roundDropAnimation }],
+              },
+            ]}
+          >
+            <FontAwesome name="circle" size={50} color="skyblue" />
+          </Animated.View>
         </View>
       </View>
     </SafeAreaView>

@@ -19,6 +19,8 @@ import Toaster from "./components/Toaster";
 import Carousel from "./components/Carousel";
 import Animations from "./components/Animated";
 import WaterDrop from "./components/waterDrop";
+import { NavigationContainer } from "@react-navigation/native";
+import { createStackNavigator } from "@react-navigation/stack";
 
 export default function App() {
   const [carName, setCarName] = useState("Curvv");
@@ -54,7 +56,7 @@ export default function App() {
       </View>
     </TouchableOpacity>
   );
-
+  const stack = createStackNavigator();
   return (
     /* <View style={styles.mainDiv}>
         <View style={styles.insideDiv}>
@@ -82,7 +84,10 @@ export default function App() {
       {/* <Toaster /> */}
       {/* <Carousel /> */}
       {/* <Animations /> */}
-      <WaterDrop />
+      {/* <WaterDrop /> */}
+      <NavigationContainer>
+        <stack.Navigator></stack.Navigator>
+      </NavigationContainer>
     </>
   );
 }
