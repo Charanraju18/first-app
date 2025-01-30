@@ -21,7 +21,9 @@ import Animations from "./components/Animated";
 import WaterDrop from "./components/waterDrop";
 import { NavigationContainer } from "@react-navigation/native";
 import { createStackNavigator } from "@react-navigation/stack";
-
+import { Screen1, Screen2, Screen3 } from "./components/Screens";
+import TopBar from "./components/TopBar";
+import Navigation from "./components/TopBar";
 export default function App() {
   const [carName, setCarName] = useState("Curvv");
   const [select, setSelected] = useState("Curvv");
@@ -85,9 +87,14 @@ export default function App() {
       {/* <Carousel /> */}
       {/* <Animations /> */}
       {/* <WaterDrop /> */}
-      <NavigationContainer>
-        <stack.Navigator></stack.Navigator>
-      </NavigationContainer>
+      {/* <NavigationContainer>
+        <stack.Navigator>
+          <stack.Screen name="screen1" component={Screen1} />
+          <stack.Screen name="screen2" component={Screen2} />
+          <stack.Screen name="screen3" component={Screen3} />
+        </stack.Navigator>
+      </NavigationContainer> */}
+      <Navigation />
     </>
   );
 }
