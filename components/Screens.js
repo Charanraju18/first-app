@@ -12,6 +12,7 @@ import { Button } from "react-native-paper";
 import { SafeAreaView } from "react-native-safe-area-context";
 
 const { width, height } = Dimensions.get("screen");
+
 const chats = [
   {
     id: 1,
@@ -94,11 +95,9 @@ const chats = [
     message: "Can you send the report?",
   },
 ];
+// chats
 const Screen1 = () => {
   const navigation = useNavigation();
-  const fun = () => {
-    navigation.navigate("Status");
-  };
   const date =
     new Date().getDate() +
     "/" +
@@ -155,31 +154,23 @@ const Screen1 = () => {
     </View>
   );
 };
-
+// status
 const Screen2 = () => {
-  const navigation = useNavigation();
-  const fun = () => {
-    navigation.navigate("Calls");
-  };
-  return <View style={{ width: width, height: height }}></View>;
+  return <View style={{ width: width, height: height }}>
+    <Text>Screen2</Text>
+  </View>;
+};
+//
+const Screen4 = () => {
+  return <View style={{ width: width, height: height }}>
+    <Text>Screen4</Text>
+  </View>;
 };
 
 const Screen3 = () => {
-  const navigation = useNavigation();
-  const fun = () => {
-    navigation.navigate("Chats");
-  };
-  return <View style={{ width: width, height: height }}></View>;
-};
-
-const Screen4 = () => {
-  const navigation = useNavigation();
-  const fun = () => {
-    navigation.navigate("Camera");
-  };
   return (
     <View style={{ width: width, height: height }}>
-      <Text>Screen4</Text>
+      <Text>Screen3</Text>
     </View>
   );
 };

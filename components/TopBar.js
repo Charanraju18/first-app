@@ -4,7 +4,6 @@ import { SafeAreaView } from "react-native-safe-area-context";
 import { createStackNavigator } from "@react-navigation/stack";
 import { NavigationContainer } from "@react-navigation/native";
 import { createMaterialTopTabNavigator } from "@react-navigation/material-top-tabs";
-import FontAwesome from "react-native-vector-icons/FontAwesome";
 import MaterialIcons from "react-native-vector-icons/MaterialIcons";
 import MaterialCommunityIcons from "react-native-vector-icons/MaterialCommunityIcons";
 import { ChatScreen, Screen1, Screen2, Screen3, Screen4 } from "./Screens";
@@ -54,7 +53,7 @@ const TopBarNavigator = () => (
     />
     <TopBar.Screen
       name="Communities"
-      component={Screen4}
+      component={Screen3}
       options={{
         tabBarIcon: ({ color }) => (
           <MaterialCommunityIcons
@@ -67,7 +66,7 @@ const TopBarNavigator = () => (
     />
     <TopBar.Screen
       name="Calls"
-      component={Screen3}
+      component={Screen4}
       options={{
         tabBarIcon: ({ color }) => (
           <MaterialIcons name="call" size={23} color={color} />
@@ -75,21 +74,6 @@ const TopBarNavigator = () => (
       }}
     />
   </TopBar.Navigator>
-);
-
-const Navigation = () => (
-  <SafeAreaView style={{ flex: 1 }}>
-    <NavigationContainer>
-      <Stack.Navigator screenOptions={{ headerShown: false }}>
-        <Stack.Screen name="Main" component={MainScreen} options={{}} />
-        <Stack.Screen
-          name="ChatScreen"
-          component={ChatScreen}
-          options={{ headerShown: true, title: "Chats" }}
-        />
-      </Stack.Navigator>
-    </NavigationContainer>
-  </SafeAreaView>
 );
 
 const MainScreen = () => (
@@ -115,5 +99,21 @@ const MainScreen = () => (
     <TopBarNavigator />
   </SafeAreaView>
 );
+
+const Navigation = () => (
+  <SafeAreaView style={{ flex: 1 }}>
+    <NavigationContainer>
+      <Stack.Navigator screenOptions={{ headerShown: false }}>
+        <Stack.Screen name="Main" component={MainScreen} options={{}} />
+        <Stack.Screen
+          name="ChatScreen"
+          component={ChatScreen}
+          options={{ headerShown: true, title: "Chats" }}
+        />
+      </Stack.Navigator>
+    </NavigationContainer>
+  </SafeAreaView>
+);
+
 
 export default Navigation;
