@@ -24,6 +24,8 @@ import { createStackNavigator } from "@react-navigation/stack";
 import { Screen1, Screen2, Screen3 } from "./components/Screens";
 import TopBar from "./components/TopBar";
 import Navigation from "./components/TopBar";
+import BottomBar from "./components/BottomBar";
+import { SafeAreaView } from "react-native-safe-area-context";
 export default function App() {
   const [carName, setCarName] = useState("Curvv");
   const [select, setSelected] = useState("Curvv");
@@ -94,7 +96,10 @@ export default function App() {
           <stack.Screen name="screen3" component={Screen3} />
         </stack.Navigator>
       </NavigationContainer> */}
-      <Navigation />
+      {/* <Navigation /> */}
+      <SafeAreaView style={{ flex: 1 }}>
+        <BottomBar />
+      </SafeAreaView>
     </>
   );
 }

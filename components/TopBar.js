@@ -7,7 +7,7 @@ import { createMaterialTopTabNavigator } from "@react-navigation/material-top-ta
 import MaterialIcons from "react-native-vector-icons/MaterialIcons";
 import MaterialCommunityIcons from "react-native-vector-icons/MaterialCommunityIcons";
 import { ChatScreen, Screen1, Screen2, Screen3, Screen4 } from "./Screens";
-
+import Feather from "react-native-vector-icons/Feather";
 const Stack = createStackNavigator();
 const TopBar = createMaterialTopTabNavigator();
 
@@ -82,19 +82,28 @@ const MainScreen = () => (
       style={{
         flexDirection: "row",
         alignItems: "center",
+        justifyContent: "space-between",
         backgroundColor: "#fff",
+        flexDirection: "row",
       }}
     >
-      <Text
-        style={{
-          color: "green",
-          fontSize: 28,
-          fontWeight: 500,
-          paddingLeft: 20,
-        }}
-      >
-        WhatsApp
-      </Text>
+      <View>
+        <Text
+          style={{
+            color: "#1EA952",
+            fontSize: 28,
+            fontWeight: 500,
+            paddingLeft: 20,
+          }}
+        >
+          WhatsApp
+        </Text>
+      </View>
+      <View style={{ flexDirection: "row", gap: 20, marginRight: 20 }}>
+        <MaterialCommunityIcons name="qrcode-scan" size={23} />
+        <Feather name="camera" size={23} />
+        <MaterialCommunityIcons name="dots-vertical" size={23} />
+      </View>
     </View>
     <TopBarNavigator />
   </SafeAreaView>
@@ -104,8 +113,12 @@ const Navigation = () => {
   return (
     <SafeAreaView style={{ flex: 1 }}>
       <NavigationContainer>
-        <Stack.Navigator screenOptions={{ headerShown: false }}>
-          <Stack.Screen name="Main" component={MainScreen} options={{}} />
+        <Stack.Navigator>
+          <Stack.Screen
+            name="MainScreen"
+            component={MainScreen}
+            options={{ headerShown: false }}
+          />
           <Stack.Screen
             name="ChatScreen"
             component={ChatScreen}
