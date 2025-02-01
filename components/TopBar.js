@@ -100,20 +100,25 @@ const MainScreen = () => (
   </SafeAreaView>
 );
 
-const Navigation = () => (
-  <SafeAreaView style={{ flex: 1 }}>
-    <NavigationContainer>
-      <Stack.Navigator screenOptions={{ headerShown: false }}>
-        <Stack.Screen name="Main" component={MainScreen} options={{}} />
-        <Stack.Screen
-          name="ChatScreen"
-          component={ChatScreen}
-          options={{ headerShown: true, title: "Chats" }}
-        />
-      </Stack.Navigator>
-    </NavigationContainer>
-  </SafeAreaView>
-);
+const Navigation = () => {
+  return (
+    <SafeAreaView style={{ flex: 1 }}>
+      <NavigationContainer>
+        <Stack.Navigator screenOptions={{ headerShown: false }}>
+          <Stack.Screen name="Main" component={MainScreen} options={{}} />
+          <Stack.Screen
+            name="ChatScreen"
+            component={ChatScreen}
+            options={({ route }) => ({
+              headerShown: true,
+              title: route.params.userName,
+            })}
+          />
+        </Stack.Navigator>
+      </NavigationContainer>
+    </SafeAreaView>
+  );
+};
 
 
 export default Navigation;

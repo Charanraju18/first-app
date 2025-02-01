@@ -6,6 +6,7 @@ import {
   ScrollView,
   Image,
   TouchableOpacity,
+  StyleSheet,
 } from "react-native";
 import { useNavigation } from "@react-navigation/native";
 import { Button } from "react-native-paper";
@@ -128,7 +129,10 @@ const Screen1 = () => {
               width: width,
             }}
             onPress={() =>
-              navigation.navigate("ChatScreen", { chatId: item.id })
+              navigation.navigate("ChatScreen", {
+                chatId: item.id,
+                userName: item.name,
+              })
             }
           >
             <Image
@@ -156,15 +160,19 @@ const Screen1 = () => {
 };
 // status
 const Screen2 = () => {
-  return <View style={{ width: width, height: height }}>
-    <Text>Screen2</Text>
-  </View>;
+  return (
+    <View style={{ width: width, height: height }}>
+      <Text>Screen2</Text>
+    </View>
+  );
 };
 //
 const Screen4 = () => {
-  return <View style={{ width: width, height: height }}>
-    <Text>Screen4</Text>
-  </View>;
+  return (
+    <View style={{ width: width, height: height }}>
+      <Text>Screen4</Text>
+    </View>
+  );
 };
 
 const Screen3 = () => {
@@ -177,9 +185,16 @@ const Screen3 = () => {
 
 const ChatScreen = () => {
   return (
-    <View>
+    <View style={styles.container}>
       <Text>Chat Screen</Text>
     </View>
   );
 };
 export { Screen1, Screen2, Screen3, Screen4, ChatScreen };
+
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    backgroundColor: "pink",
+  },
+});
