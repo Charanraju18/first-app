@@ -24,8 +24,10 @@ import { createStackNavigator } from "@react-navigation/stack";
 import { Screen1, Screen2, Screen3 } from "./components/Screens";
 import TopBar from "./components/TopBar";
 import Navigation from "./components/TopBar";
-import BottomBar from "./components/BottomBar";
+// import BottomBar from "./components/BottomBar";
 import { SafeAreaView } from "react-native-safe-area-context";
+// import MainPage from "./task/MainPage";
+import BottomBar from "./task/MainPage";
 export default function App() {
   const [carName, setCarName] = useState("Curvv");
   const [select, setSelected] = useState("Curvv");
