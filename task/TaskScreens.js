@@ -1,6 +1,5 @@
 import { createMaterialTopTabNavigator } from "@react-navigation/material-top-tabs";
 import { useNavigation } from "@react-navigation/native";
-import React from "react";
 import { View, Dimensions, Text, StyleSheet, ScrollView } from "react-native";
 import { Button } from "react-native-paper";
 
@@ -109,6 +108,5 @@ const styles = StyleSheet.create({
     width: width,
     height: height,
     display: "flex",
-    backgroundColor: "#ff7f7f",
   },
 });

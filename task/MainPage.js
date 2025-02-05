@@ -9,7 +9,6 @@ import {
   TaskScreen3,
 } from "./TaskScreens";
 import Icon from "react-native-vector-icons/Ionicons";
-import { createMaterialTopTabNavigator } from "@react-navigation/material-top-tabs";
 
 const BottomBar = () => {
   const BottomTab = createBottomTabNavigator();
@@ -18,8 +17,8 @@ const BottomBar = () => {
       <BottomTab.Navigator
         screenOptions={({ route }) => ({
           headerShown: false,
-          tabBarActiveTintColor: "green",
-          tabBarInactiveTintColor: "black",
+          tabBarActiveTintColor: "black",
+          tabBarInactiveTintColor: "grey",
           tabBarIcon: ({ focused, color }) => {
             let IconName;
             if (route.name === "Home") {
