@@ -11,19 +11,17 @@ const BottomBar = () => {
       <BottomTab.Navigator
         screenOptions={({ route }) => ({
           headerShown: false,
-          tabBarActiveTintColor: "green",
-          tabBarInactiveTintColor: "black",
+          tabBarActiveTintColor: "black",
+          tabBarInactiveTintColor: "grey",
           tabBarIcon: ({ focused, color }) => {
             let IconName, Iconsize;
+            Iconsize = focused ? 30 : 22;
             if (route.name == "Home") {
               IconName = focused ? "home" : "home-outline";
-              Iconsize = focused ? 30 : 22;
             } else if (route.name == "Events") {
               IconName = focused ? "bar-chart" : "bar-chart-outline";
-              Iconsize = focused ? 30 : 22;
             } else if (route.name == "Profile") {
               IconName = focused ? "person" : "person-outline";
-              Iconsize = focused ? 30 : 22;
             }
             return <Icon name={IconName} color={color} size={Iconsize} />;
           },

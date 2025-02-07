@@ -28,6 +28,9 @@ import Navigation from "./components/TopBar";
 import { SafeAreaView } from "react-native-safe-area-context";
 // import MainPage from "./task/MainPage";
 import BottomBar from "./task/MainPage";
+import DNav from "./components/DrawerNavigation";
+import PresTopBar from "./presentation/topBar";
+import ChatStack from "./presentation/topBar";
 export default function App() {
   const [carName, setCarName] = useState("Curvv");
   const [select, setSelected] = useState("Curvv");
@@ -100,7 +103,8 @@ export default function App() {
       </NavigationContainer> */}
       {/* <Navigation /> */}
       <SafeAreaView style={{ flex: 1 }}>
-        <BottomBar />
+        {/* <BottomBar /> */}
+        <ChatStack />
       </SafeAreaView>
     </>
   );

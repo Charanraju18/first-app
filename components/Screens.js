@@ -167,18 +167,18 @@ const Screen2 = () => {
   );
 };
 //
-const Screen4 = () => {
-  return (
-    <View style={{ width: width, height: height }}>
-      <Text>Screen4</Text>
-    </View>
-  );
-};
-
 const Screen3 = () => {
   return (
     <View style={{ width: width, height: height }}>
       <Text>Screen3</Text>
+    </View>
+  );
+};
+
+const Screen4 = () => {
+  return (
+    <View style={{ width: width, height: height }}>
+      <Text>Screen4</Text>
     </View>
   );
 };
@@ -190,6 +190,7 @@ const ChatScreen = () => {
     </View>
   );
 };
+
 export { Screen1, Screen2, Screen3, Screen4, ChatScreen };
 
 const styles = StyleSheet.create({
