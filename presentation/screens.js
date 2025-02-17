@@ -1,5 +1,5 @@
 import { useNavigation } from "@react-navigation/native";
-import { Text, View } from "react-native";
+import { StyleSheet, Text, View } from "react-native";
 import { Button } from "react-native-paper";
 
 const Chats = () => {
@@ -8,8 +8,7 @@ const Chats = () => {
     navigation.navigate("newScreen");
   };
   return (
-    <View>
-      <Text>Chats Screen</Text>
+    <View style={styles.container}>
       <View
         style={{
           display: "flex",
@@ -28,6 +27,7 @@ const Chats = () => {
         >
           <Text style={{ color: "white" }}>New Screen</Text>
         </Button>
+        <Text style={{ marginTop: 20, fontSize: 20 }}>Chats Screen</Text>
       </View>
     </View>
   );
@@ -35,26 +35,35 @@ const Chats = () => {
 
 const Status = () => {
   return (
-    <View>
-      <Text>status Screen</Text>
+    <View style={styles.container}>
+      <Text style={{ marginTop: 20, fontSize: 20 }}>status Screen</Text>
     </View>
   );
 };
 
 const Calls = () => {
   return (
-    <View>
-      <Text>calls Screen</Text>
+    <View style={styles.container}>
+      <Text style={{ marginTop: 20, fontSize: 20 }}>calls Screen</Text>
     </View>
   );
 };
 
 const NewScreen = () => {
   return (
-    <View>
-      <Text>New Screen</Text>
+    <View style={styles.container}>
+      <Text style={{ marginTop: 20, fontSize: 20 }}>New Screen</Text>
     </View>
   );
 };
 
 export { Chats, Status, Calls, NewScreen };
+
+const styles = StyleSheet.create({
+  container: {
+    display: "flex",
+    justifyContent: "center",
+    alignItems: "center",
+    flex: 1,
+  },
+});
