@@ -43,6 +43,7 @@ const ImagePicker = () => {
       <View style={{ width: width, alignItems: "center" }}>
         <Image source={{ uri: image }} style={{ width: 200, height: 200 }} />
       </View>
+
     </View>
   );
 };

@@ -31,6 +31,7 @@ import BottomBar from "./task/MainPage";
 import DNav from "./components/DrawerNavigation";
 import ChatStack from "./presentation/ChatStack";
 import ImagePicker from "./Image class/images";
+import Shareing from "./Image class/Shareing";
 export default function App() {
   const [carName, setCarName] = useState("Curvv");
   const [select, setSelected] = useState("Curvv");
@@ -105,7 +106,8 @@ export default function App() {
       <SafeAreaView style={{ flex: 1 }}>
         {/* <BottomBar /> */}
         {/* <ChatStack /> */}
-        <ImagePicker />
+        {/* <ImagePicker /> */}
+        <Shareing />
       </SafeAreaView>
     </>
   );
