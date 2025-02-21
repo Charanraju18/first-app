@@ -33,6 +33,8 @@ import ChatStack from "./presentation/ChatStack";
 import ImagePicker from "./Image class/images";
 import Shareing from "./Image class/Shareing";
 import Camera from "./Image class/Camera";
+import FingerPrint from "./Image class/FingerPrint";
+import MicroPhone from "./Image class/MicroPhone";
 export default function App() {
   const [carName, setCarName] = useState("Curvv");
   const [select, setSelected] = useState("Curvv");
@@ -109,7 +111,9 @@ export default function App() {
         {/* <ChatStack /> */}
         {/* <ImagePicker /> */}
         {/* <Shareing /> */}
-        <Camera />
+        {/* <Camera /> */}
+        {/* <FingerPrint /> */}
+        <MicroPhone />
       </SafeAreaView>
     </>
   );
