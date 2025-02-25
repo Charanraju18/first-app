@@ -14,7 +14,6 @@ import { useEffect, useState } from "react";
 import Flex from "./components/flex";
 import TableRows from "./components/TableRows";
 import SafeArea from "./components/SafeArea";
-import Modals from "./components/Modals";
 import Toaster from "./components/Toaster";
 import Carousel from "./components/Carousel";
 import Animations from "./components/Animated";
@@ -35,6 +34,7 @@ import Shareing from "./Image class/Shareing";
 import Camera from "./Image class/Camera";
 import FingerPrint from "./Image class/FingerPrint";
 import MicroPhone from "./Image class/MicroPhone";
+import Notification from "./Notification/Notification";
 export default function App() {
   const [carName, setCarName] = useState("Curvv");
   const [select, setSelected] = useState("Curvv");
@@ -113,7 +113,8 @@ export default function App() {
         {/* <Shareing /> */}
         {/* <Camera /> */}
         {/* <FingerPrint /> */}
-        <MicroPhone />
+        {/* <MicroPhone /> */}
+        <Notification />
       </SafeAreaView>
     </>
   );
